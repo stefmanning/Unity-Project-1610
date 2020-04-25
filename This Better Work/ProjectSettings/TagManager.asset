@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Obstacles
   - Terrain
-  - 
-  - 
+  - Enemy
+  - Pickups
   - 
   - 
   - 

@@ -17,20 +17,22 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, timeToDie);
+      //  Destroy(gameObject, timeToDie);
 
 
     }
-
-    void OnTriggerEnter(Collider Other)
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+    }
+    /*void OnTriggerEnter(Collider Other)
     {
         if (Other.gameObject.CompareTag("Player"))
         {
             ScoreManager.AddPoints(pointsToAdd);
             Destroy(gameObject);
 
-        }
+        }*/
 
 
-    }
 }

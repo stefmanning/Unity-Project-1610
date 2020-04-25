@@ -16,17 +16,21 @@ public class HealthPIckup : MonoBehaviour
     {
 
     }
-
     private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Move.AddHealth(healthAmt);
+    }
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
 
             Destroy(gameObject);
-            Move.AddHealth(healthAmt);
+            
 
         }
 
 
-    }
+    }*/
 }
