@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int currentHealth;
-    public const maxHealth = 3;
+    public int maxHealth = 3;
     public Transform spawnPoint;
     public int points;
 
