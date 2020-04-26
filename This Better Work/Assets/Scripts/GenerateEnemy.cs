@@ -24,7 +24,7 @@ public class GenerateEnemy : MonoBehaviour
         {
             xPos = Random.Range(20, 7);
             zPos = Random.Range(-16, 17);
-            yPos = Random.Range(-2.6f, -1.3f);
+           
             Instantiate(Enemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
             yield return new WaitForSeconds(spawnTime);
             enemyCount += 1;
