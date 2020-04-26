@@ -7,6 +7,8 @@ public class Pickup : MonoBehaviour
 
     public int pointsToAdd;
     public float timeToDie;
+    public GameObject Pickups;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,19 @@ public class Pickup : MonoBehaviour
 
 
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Pickups.SetActive(false);
+        Invoke("Respawn", 5);
+
+    }
+     void Respawn()
+        {
+            Pickups.SetActive(true);
+
+        }
+
+        //Destroy(gameObject);
     }
     /*void OnTriggerEnter(Collider Other)
     {
@@ -35,4 +47,4 @@ public class Pickup : MonoBehaviour
         }*/
 
 
-}
+

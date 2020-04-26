@@ -48,11 +48,11 @@ public class Move : MonoBehaviour
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
    
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+       /* if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpHeight * 1000 * Time.deltaTime * 100);
+            rb.AddForce(Vector3.up * jumpHeight * 100 * Time.deltaTime * 100);
 
-        }
+        }*/
 
         {
             if (Input.GetKey(KeyCode.LeftArrow))

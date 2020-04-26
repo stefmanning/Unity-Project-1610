@@ -8,6 +8,8 @@ public class GenerateEnemy : MonoBehaviour
     public int xPos;
     public int zPos;
     public float yPos;
+    public int spawnTime;
+
 
     public int enemyCount;
 
@@ -24,7 +26,7 @@ public class GenerateEnemy : MonoBehaviour
             zPos = Random.Range(-16, 17);
             yPos = Random.Range(-2.6f, -1.3f);
             Instantiate(Enemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(spawnTime);
             enemyCount += 1;
         }
     }

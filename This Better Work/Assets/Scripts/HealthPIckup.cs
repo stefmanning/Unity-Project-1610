@@ -18,7 +18,7 @@ public class HealthPIckup : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
         Move.AddHealth(healthAmt);
     }
     /*private void OnTriggerEnter(Collider other)
