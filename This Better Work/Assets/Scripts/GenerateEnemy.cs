@@ -9,8 +9,6 @@ public class GenerateEnemy : MonoBehaviour
     public int zPos;
     public float yPos;
     public int spawnTime;
-
-
     public int enemyCount;
 
     // Start is called before the first frame update
@@ -29,5 +27,6 @@ public class GenerateEnemy : MonoBehaviour
             yield return new WaitForSeconds(spawnTime);
             enemyCount += 1;
         }
+
     }
 }

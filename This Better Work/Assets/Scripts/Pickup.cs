@@ -11,28 +11,24 @@ public class Pickup : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      //  Destroy(gameObject, timeToDie);
-
-
-    }
     void OnTriggerEnter(Collider other)
     {
+        Move.boostOn();
         Pickups.SetActive(false);
-        Invoke("Respawn", 5);
+        Invoke("powerDown", 5);
 
+    }
+
+    void powerDown()
+    {
+        Move.boostOff();
+        Invoke("Respawn", 5);
     }
      void Respawn()
         {
-            Pickups.SetActive(true);
-
+        Pickups.SetActive(true);
+        
         }
 
         //Destroy(gameObject);

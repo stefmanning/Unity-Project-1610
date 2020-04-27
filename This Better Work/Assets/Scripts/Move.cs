@@ -5,7 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    public float speed;
+    public static int speed = 10;
     public float turnSpeed;
     public float verticalTurnSpeed;
     public float verticalInput;
@@ -65,6 +65,7 @@ public class Move : MonoBehaviour
         if (health <= 0)
         {
 
+            //speed = 0;
             speed = 0;
             turnSpeed = 0;
             print("Game Over");
@@ -80,7 +81,26 @@ public class Move : MonoBehaviour
 
     }
 
+  
 
+
+    public static void boostOn()
+    {
+        speed = speed * 2;
+        print("boost on");
+       
+    }
+
+
+
+
+     public static void boostOff()
+    {
+        speed = speed / 2;
+        print("boost off");
+    }
+    
+    
     public static void AddHealth(int healthAmt)
     {
         health = health + healthAmt;
