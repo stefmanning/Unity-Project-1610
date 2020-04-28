@@ -85,7 +85,7 @@ public class Wander : MonoBehaviour
             if (timer >= wanderTimer)
             {
                 Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
-                agent.SetDestination(newPos);
+               // agent.SetDestination(newPos);
                 timer = 0;
             }
 
