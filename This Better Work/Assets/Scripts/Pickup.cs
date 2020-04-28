@@ -23,13 +23,16 @@ public class Pickup : MonoBehaviour
     void powerDown()
     {
         Move.boostOff();
-        Invoke("Respawn", 5);
+        //Invoke("Respawn", Random.Range(1,15));
+        Destroy(gameObject);
     }
      void Respawn()
         {
         Pickups.SetActive(true);
         
         }
+
+
 
         //Destroy(gameObject);
     }

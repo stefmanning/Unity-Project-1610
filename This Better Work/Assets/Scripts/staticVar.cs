@@ -8,4 +8,5 @@ public static class staticVar
     public static int enemydamage = 10;
     public static int moveSpeed = 8;
     public static bool poweredup = false;
+
 }
